@@ -12,8 +12,7 @@ public class Duck extends Bird implements Flyable, Omnivore{
     }
 
     public Duck(String givenName, int age) {
-        setName(givenName);
-        setAge(age);
+        this(givenName,0,true);
     }
     public Duck(String givenname, int age, boolean isFemale){
         setName(givenname);
