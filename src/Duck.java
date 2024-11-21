@@ -3,7 +3,8 @@ public class Duck extends Bird implements Flyable, Omnivore{
             "It walks like a Duck and quaks like a duck";
 
     private boolean female;
-    
+    private Duck[] children[];
+
     public Duck(String givenName) {
         this(givenName, 0, true);
         // Alternative:
