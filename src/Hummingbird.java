@@ -8,11 +8,11 @@ public class Hummingbird extends Bird implements Flyable, Herbivore {
     public Hummingbird(String givenname, int age, boolean isFemale) {
         setName(givenname);
         setAge(age);
-        female = isFemale;
+        setFemale(isFemale);
     }
 
     public void layEggs() {
-        if (female) {
+        if (getFemale()) {
             if (children == null) {
                 children = new Hummingbird[4];
 

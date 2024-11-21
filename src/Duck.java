@@ -3,37 +3,58 @@ public class Duck extends Bird implements Flyable, Omnivore {
             "It walks like a Duck and quaks like a duck";
 
     // private final boolean female;
+    //public boolean female;
     private Duck[] children;
-    private Duck mother;
+    public Duck mother;
 
-    public Duck(String givenName) {
+   public Duck(String givenName){
+        this(givenName, 0);
+    }
+    public Duck(String givenName, int age) {
         this(givenName, 0, true);
         // Alternative:
         // setName(givenName);
         // setAge(0);
     }
 
-    public Duck(String givenName, int age) {
-        this(givenName, 0, true);
+    public Duck(String givenName, int age, boolean isFemale) {
+        this(givenName,age, isFemale, null);
     }
 
-    public Duck(String givenname, int age, boolean isFemale) {
+    public Duck(String givenname, int age, boolean isFemale, Duck theMother) {
         setName(givenname);
         setAge(age);
-        female = isFemale;
+        setFemale(isFemale);
+        mother = theMother;
     }
 
     public void layEggs() {
-        if (female) {
+        if (getFemale()) {
             if (children == null) {
                 children = new Duck[4];
 
-                children[0] = new Duck("Anna", 0, true);
-                children[1] = new Duck("Bertha", 0, true);
-                children[2] = new Duck("Cesar", 0, false);
-                children[3] = new Duck("Donald", 0, false);
+                children[0] = new Duck("Anna", 0, true, this);
+                children[1] = new Duck("Bertha", 0, true, this);
+                children[2] = new Duck("Cesar", 0, false, this);
+                children[3] = new Duck("Donald", 0, false, this);
             }
         } else System.out.println("Männliche Ducks können keine Eier legen");
+    }
+
+    public void printAncestors() {
+        Duck currentAncestor = mother;
+
+        while (currentAncestor != null){
+            System.out.println(currentAncestor.getName());
+            currentAncestor = currentAncestor.mother;
+        }
+    }
+
+    public void printAncestorRecursive(){
+        System.out.println(getName());
+        if (mother != null) {
+            mother.printAncestorRecursive();
+        }
     }
 
     public void listAllChildren() {

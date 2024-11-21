@@ -31,7 +31,7 @@ public class Zoo {
         myZoo.letAllFlyingBirdsFly();
         System.out.println(" ----- Feeding all animals -----");
         myZoo.feedAllAnimals();
-        myZoo.letDucksHaveChildren();
+        myZoo.breedAllAnimals();
     }
 
     public void listAllAnimals() {
@@ -88,6 +88,10 @@ public class Zoo {
             }
         }
     }
+    public void breedAllAnimals(){
+        letDucksHaveChildren();
+        letOstrichesHaveChildren();
+    }
 
     public void letDucksHaveChildren() {
         for (int i = 0; i < allBirds.length; i++) {
@@ -95,6 +99,16 @@ public class Zoo {
                 Duck currentDuck = (Duck) allBirds[i];
                 currentDuck.layEggs();
                 currentDuck.listAllChildren();
+            }
+
+        }
+    }
+    public void letOstrichesHaveChildren() {
+        for (int i = 0; i < allBirds.length; i++) {
+            if (allBirds[i] instanceof Ostrich) {
+                Ostrich currentOstrich = (Ostrich) allBirds[i];
+                currentOstrich.layEggs();
+                currentOstrich.listAllChildren();
             }
         }
     }

@@ -8,7 +8,7 @@ public class Ostrich extends Bird {
     public Ostrich(String forceName, int forceAge, boolean isFemale) {
         setName(forceName);
         setAge(forceAge);
-        female = isFemale;
+        setFemale(isFemale);
     }
 
     public void sayBuuu(int buuCount) {
@@ -18,7 +18,7 @@ public class Ostrich extends Bird {
     }
 
     public void layEggs() {
-        if (female) {
+        if (getFemale()) {
             if (children == null) {
                 children = new Ostrich[4];
 
@@ -27,7 +27,7 @@ public class Ostrich extends Bird {
                 children[2] = new Ostrich("Cesar", 0, false);
                 children[3] = new Ostrich("Donald", 0, false);
             }
-        } else System.out.println("Männliche Ducks können keine Eier legen");
+        } else System.out.println("Männliche Ostrichs können keine Eier legen");
     }
 
     public void runAround() {

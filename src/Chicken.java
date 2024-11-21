@@ -9,11 +9,11 @@ public class Chicken extends Bird implements Omnivore, CarnivorEatable {
     public Chicken(String forceName, int forceAge, boolean isFemale) {
         setName(forceName);
         setAge(forceAge);
-        female = isFemale;
+        setFemale(isFemale);
     }
 
     public void layEggs() {
-        if (female) {
+        if (getFemale()) {
             if (children == null) {
                 children = new Chicken[4];
 

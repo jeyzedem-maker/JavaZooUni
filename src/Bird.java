@@ -1,6 +1,14 @@
 public abstract class Bird extends Animal {
-    //    private int age;
-    public boolean female;
+    public boolean getFemale() {
+        return female;
+    }
+
+    public void setFemale(boolean female) {
+        this.female = female;
+    }
+
+    //    private int ag
+    private boolean female;
     public Bird[] children;
 
     public abstract void layEggs();

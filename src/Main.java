@@ -9,8 +9,8 @@ public class Main {
         numbers[3] = 12;
         numbers[4] = 2;
         numbers[5] = 1;
-        Duck freddyTheDuck = new Duck("Bärbel", numbers[0]);
-        Duck tinaTheDuck = new Duck("Tina", numbers[1]);
+        Duck freddyTheDuck = new Duck("Bärbel", numbers[0], false);
+        Duck tinaTheDuck = new Duck("Tina", numbers[1], false);
         Ostrich gustelTheOstrich = new Ostrich("Gustel", 10);
         Ostrich ossiTheOstrich = new Ostrich("Ossi", 12);
         Chicken charlieTheChicken = new Chicken("Charlie", 2);
