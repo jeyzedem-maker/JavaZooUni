@@ -13,13 +13,13 @@ public class Zoo {
     public Zoo() {
         //Constructor für die Klasse Zoo
         allBirds = new Bird[35];
-        allBirds[0] = new Duck("Freddy the Duck", 2,false);
+        allBirds[0] = new Duck("Freddy the Duck", 2, false);
         allBirds[1] = new Duck("Tina the Duck", 8);
 
         allBirds[2] = new Ostrich("Gustel the Ostrich", 10, false);
         allBirds[3] = new Ostrich("Ossi the Ostrich", 12);
 
-        allBirds[4] = new Chicken("Charlie the Chicken", 2,false);
+        allBirds[4] = new Chicken("Charlie the Chicken", 2, false);
         allBirds[5] = new Chicken("Ciara the Chicken", 1);
     }
 

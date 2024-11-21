@@ -1,5 +1,5 @@
-public class Grass extends Plant implements HerbivoreEatable{
-    public String toString(){
+public class Grass extends Plant implements HerbivoreEatable {
+    public String toString() {
         return "Grass";
     }
 }

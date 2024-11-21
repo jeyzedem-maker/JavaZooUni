@@ -2,8 +2,8 @@ public class Chicken extends Bird implements Omnivore, CarnivorEatable {
 
     //public Chicken[] children;
 
-    public Chicken(String forceName,int forceAge) {
-        this(forceName,forceAge,true);
+    public Chicken(String forceName, int forceAge) {
+        this(forceName, forceAge, true);
     }
 
     public Chicken(String forceName, int forceAge, boolean isFemale) {

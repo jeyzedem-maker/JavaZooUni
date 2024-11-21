@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int[] numbers;
         numbers = new int[6];
         numbers[0] = 2;
@@ -11,7 +11,7 @@ public class Main {
         numbers[5] = 1;
         Duck freddyTheDuck = new Duck("Bärbel", numbers[0]);
         Duck tinaTheDuck = new Duck("Tina", numbers[1]);
-        Ostrich gustelTheOstrich = new Ostrich("Gustel",10);
+        Ostrich gustelTheOstrich = new Ostrich("Gustel", 10);
         Ostrich ossiTheOstrich = new Ostrich("Ossi", 12);
         Chicken charlieTheChicken = new Chicken("Charlie", 2);
         Chicken ciaraTheChicken = new Chicken("Ciara", 1);
@@ -20,7 +20,7 @@ public class Main {
         freddyTheDuck.sayName();
         System.out.println("Freddy is so viele Jahre alt: " + freddyTheDuck.getAge());
         tinaTheDuck.sayName();
-        System.out.println("Tina ist so viele Jahre alt: "+ tinaTheDuck.getAge());
+        System.out.println("Tina ist so viele Jahre alt: " + tinaTheDuck.getAge());
         gustelTheOstrich.sayName();
         System.out.println("Gustel ist so viele Jahre alt: " + gustelTheOstrich.getAge());
         ossiTheOstrich.sayName();

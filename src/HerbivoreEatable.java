@@ -1,3 +1,3 @@
-public interface HerbivoreEatable extends Eatable{
+public interface HerbivoreEatable extends Eatable {
 
 }

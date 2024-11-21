@@ -1,4 +1,4 @@
-public class Hummingbird extends Bird implements Flyable, Herbivore{
+public class Hummingbird extends Bird implements Flyable, Herbivore {
 
 
     public Hummingbird(String givenName, int age) {
@@ -10,6 +10,7 @@ public class Hummingbird extends Bird implements Flyable, Herbivore{
         setAge(age);
         female = isFemale;
     }
+
     public void layEggs() {
         if (female) {
             if (children == null) {
@@ -23,9 +24,10 @@ public class Hummingbird extends Bird implements Flyable, Herbivore{
         } else System.out.println("Männliche Ducks können keine Eier legen");
     }
 
-    public void eat(HerbivoreEatable food){
+    public void eat(HerbivoreEatable food) {
         System.out.println(getName() + " is slurping some " + food);
     }
+
     public void fly() {
         System.out.println("Flying");
     }

@@ -2,6 +2,7 @@ public abstract class Bird extends Animal {
     //    private int age;
     public boolean female;
     public Bird[] children;
+
     public abstract void layEggs();
 
     public void flapWings(int flapCount) {

@@ -1,2 +1,2 @@
-public class Worm extends Animal implements CarnivorEatable{
+public class Worm extends Animal implements CarnivorEatable {
 }

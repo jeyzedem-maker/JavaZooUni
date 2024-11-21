@@ -1,2 +1,2 @@
-public interface CarnivorEatable extends Eatable{
+public interface CarnivorEatable extends Eatable {
 }
