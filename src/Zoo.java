@@ -95,10 +95,6 @@ public class Zoo {
                 Duck currentDuck = (Duck) allBirds[i];
                 currentDuck.layEggs();
                 currentDuck.listAllChildren();
-            }else if (allBirds[i] instanceof Ostrich){
-                Ostrich currentOstrich = (Ostrich) allBirds[i];
-                currentOstrich.layEggs();
-                currentOstrich.listAllChildren();
             }
         }
     }
