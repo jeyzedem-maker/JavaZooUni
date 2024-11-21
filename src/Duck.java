@@ -2,6 +2,8 @@ public class Duck extends Bird implements Flyable, Omnivore{
     private static String speciesDescription =
             "It walks like a Duck and quaks like a duck";
 
+    private boolean female;
+    
     public Duck(String givenName) {
         this(givenName, 0);
         // Alternative:
