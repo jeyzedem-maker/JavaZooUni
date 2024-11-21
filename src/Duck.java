@@ -21,6 +21,24 @@ public class Duck extends Bird implements Flyable, Omnivore{
         female = isFemale;
     }
 
+    public void layEggs() {
+        if (female) {
+            if (children == null) {
+                children = new Duck[4];
+
+                children[0] = new Duck("Anna", 0,true);
+                children[1] = new Duck("Bertha", 0, true);
+                children[2] = new Duck("Cesar", 0, false);
+                children[3] = new Duck("Donald", 0, false);
+            }
+        }else System.out.println("Männliche Ducks können keine Eier legen");
+    }
+    public void listAllChildren(){
+        System.out.println(getName() + "s Kinder sind:");
+        for (int i = 0; i < children.length; i++){
+            children[i].sayName();
+        
+    }
     public void eat(Eatable food) {
         System.out.println(getName() + " is eating " + food);
     }
