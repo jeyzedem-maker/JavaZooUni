@@ -4,6 +4,7 @@ public class Duck extends Bird implements Flyable, Omnivore {
 
     // private final boolean female;
     private Duck[] children;
+    private Duck mother;
 
     public Duck(String givenName) {
         this(givenName, 0, true);
