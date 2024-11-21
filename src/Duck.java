@@ -35,9 +35,12 @@ public class Duck extends Bird implements Flyable, Omnivore{
     }
     public void listAllChildren(){
         System.out.println(getName() + "s Kinder sind:");
-        for (int i = 0; i < children.length; i++){
-            children[i].sayName();
-        
+        if (children == null) {
+            for (int i = 0; i < children.length; i++) {
+                children[i].sayName();
+
+            }
+        }
     }
     public void eat(Eatable food) {
         System.out.println(getName() + " is eating " + food);
