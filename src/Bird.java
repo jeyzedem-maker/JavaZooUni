@@ -7,7 +7,10 @@ public abstract class Bird extends Animal {
         this.female = female;
     }
 
-    //    private int ag
+    public boolean isFemale() {
+        return female;
+    }
+
     private boolean female;
     public Bird[] children;
 
