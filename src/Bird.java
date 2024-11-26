@@ -1,4 +1,8 @@
 public abstract class Bird extends Animal {
+    private boolean female;
+
+    public abstract void layEggs() throws MaleBirdsCannotLayEggsException;
+
     public boolean getFemale() {
         return female;
     }
