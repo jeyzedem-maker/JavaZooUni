@@ -1,3 +1,6 @@
+package de.dhbw.ravensburg.javazoo.classes.creature;
+
+import de.dhbw.ravensburg.javazoo.exeptions.AgeMustBePositiveException;
 
 public abstract class Creature {
     private int age;

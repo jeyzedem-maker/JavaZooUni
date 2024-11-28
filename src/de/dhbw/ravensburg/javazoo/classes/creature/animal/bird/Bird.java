@@ -1,3 +1,8 @@
+package de.dhbw.ravensburg.javazoo.classes.creature.animal.bird;
+
+import de.dhbw.ravensburg.javazoo.classes.creature.animal.Animal;
+import de.dhbw.ravensburg.javazoo.exeptions.MaleBirdsCannotLayEggsException;
+
 public abstract class Bird extends Animal {
     private boolean female;
 

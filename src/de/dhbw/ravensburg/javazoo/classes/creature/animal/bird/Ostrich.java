@@ -1,9 +1,13 @@
+package de.dhbw.ravensburg.javazoo.classes.creature.animal.bird;
+
+import de.dhbw.ravensburg.javazoo.interfaces.Herbivore;
+import de.dhbw.ravensburg.javazoo.interfaces.HerbivoreEatable;
 
 public class Ostrich extends Bird implements Herbivore {
     private boolean female;
     private Ostrich[] children;
 
-    public Ostrich(String givenName, int i, boolean b) {
+    public Ostrich(String givenName, int i, boolean b)  {
         setName(givenName);
         setAge(0);
         setFemale(true);

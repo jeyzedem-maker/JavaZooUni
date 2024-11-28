@@ -1,3 +1,9 @@
+package de.dhbw.ravensburg.javazoo.classes.creature.animal.bird;
+
+import de.dhbw.ravensburg.javazoo.interfaces.CarnivorEatable;
+import de.dhbw.ravensburg.javazoo.interfaces.Eatable;
+import de.dhbw.ravensburg.javazoo.interfaces.Omnivore;
+
 public class Chicken extends Bird implements Omnivore, CarnivorEatable {
 
     public Chicken[] children;
@@ -42,6 +48,6 @@ public class Chicken extends Bird implements Omnivore, CarnivorEatable {
     }
 
     public void eat(Eatable food) {
-        System.out.println("Eating: " + food);
+        System.out.println(getName() + "is eating: " + food);
     }
 }

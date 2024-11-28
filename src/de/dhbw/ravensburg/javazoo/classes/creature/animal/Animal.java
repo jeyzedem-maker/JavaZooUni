@@ -1,3 +1,7 @@
+package de.dhbw.ravensburg.javazoo.classes.creature.animal;
+
+import de.dhbw.ravensburg.javazoo.classes.creature.Creature;
+
 public abstract class Animal extends Creature {
     private String name;
 

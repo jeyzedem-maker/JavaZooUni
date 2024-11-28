@@ -1,3 +1,8 @@
+package de.dhbw.ravensburg.javazoo.classes.creature.animal.bird;
+
+import de.dhbw.ravensburg.javazoo.interfaces.Flyable;
+import de.dhbw.ravensburg.javazoo.interfaces.Herbivore;
+import de.dhbw.ravensburg.javazoo.interfaces.HerbivoreEatable;
 
 public class Hummingbird extends Bird implements Flyable, Herbivore {
     private Hummingbird[] children;

@@ -1,3 +1,9 @@
+package de.dhbw.ravensburg.javazoo.company;
+
+import de.dhbw.ravensburg.javazoo.classes.creature.animal.bird.Chicken;
+import de.dhbw.ravensburg.javazoo.classes.creature.animal.bird.Duck;
+import de.dhbw.ravensburg.javazoo.classes.creature.animal.bird.Ostrich;
+
 public class Main {
     public static void main(String[] args) {
         int[] numbers;

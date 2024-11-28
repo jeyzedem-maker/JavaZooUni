@@ -1,3 +1,9 @@
+package de.dhbw.ravensburg.javazoo.classes.creature.animal.bird;
+
+import de.dhbw.ravensburg.javazoo.exeptions.MaleBirdsCannotLayEggsException;
+import de.dhbw.ravensburg.javazoo.interfaces.Eatable;
+import de.dhbw.ravensburg.javazoo.interfaces.Flyable;
+import de.dhbw.ravensburg.javazoo.interfaces.Omnivore;
 
 public class Duck extends Bird implements Flyable, Omnivore {
     private static String speciesDescription =
@@ -96,5 +102,4 @@ public class Duck extends Bird implements Flyable, Omnivore {
 
         timo.printAncestorsRecursive();
     }
-
 }
