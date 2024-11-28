@@ -1,35 +1,37 @@
+
 public class Duck extends Bird implements Flyable, Omnivore {
-    private static final String speciesDescription =
+    private static String speciesDescription =
             "It walks like a Duck and quaks like a duck";
 
-    // private final boolean female;
-    //public boolean female;
     private Duck[] children;
-    public Duck mother;
+    private Duck mother;
 
-   public Duck(String givenName){
-        this(givenName, 0);
-    }
-    public Duck(String givenName, int age) {
+    public Duck(String givenName) {
         this(givenName, 0, true);
         // Alternative:
         // setName(givenName);
         // setAge(0);
     }
 
-    public Duck(String givenName, int age, boolean isFemale) {
-        this(givenName,age, isFemale, null);
+    public Duck(String givenName, int age) {
+        this(givenName, age, true);
     }
 
-    public Duck(String givenname, int age, boolean isFemale, Duck theMother) {
-        setName(givenname);
+    public Duck(String givenName, int age, boolean isFemale) {
+        setName(givenName);
+        setAge(age);
+        setFemale(isFemale);
+    }
+
+    public Duck(String givenName, int age, boolean isFemale, Duck theMother) {
+        setName(givenName);
         setAge(age);
         setFemale(isFemale);
         mother = theMother;
     }
 
-    public void layEggs() {
-        if (getFemale()) {
+    public void layEggs() throws MaleBirdsCannotLayEggsException {
+        if (this.isFemale()) {
             if (children == null) {
                 children = new Duck[4];
 
@@ -38,31 +40,34 @@ public class Duck extends Bird implements Flyable, Omnivore {
                 children[2] = new Duck("Cesar", 0, false, this);
                 children[3] = new Duck("Donald", 0, false, this);
             }
-        } else System.out.println("Männliche Ducks können keine Eier legen");
+        } else {
+            throw new MaleBirdsCannotLayEggsException(
+                    "Männliche Ducks können keine Eier legen"
+            );
+        }
     }
 
     public void printAncestors() {
         Duck currentAncestor = mother;
 
-        while (currentAncestor != null){
+        while (currentAncestor != null) {
             System.out.println(currentAncestor.getName());
             currentAncestor = currentAncestor.mother;
         }
     }
 
-    public void printAncestorRecursive(){
+    public void printAncestorsRecursive() {
         System.out.println(getName());
         if (mother != null) {
-            mother.printAncestorRecursive();
+            mother.printAncestorsRecursive();
         }
     }
 
     public void listAllChildren() {
+        System.out.println(getName() + "s Kinder sind:");
         if (children != null) {
-            System.out.println(getName() + "s Kinder sind:");
             for (int i = 0; i < children.length; i++) {
                 children[i].sayName();
-
             }
         }
     }
@@ -83,5 +88,13 @@ public class Duck extends Bird implements Flyable, Omnivore {
     public static void printSpeciesDescription() {
         System.out.println(speciesDescription);
     }
-}
 
+    public static void main(String[] args) {
+        Duck tina = new Duck("Tina", 0, true);
+        Duck anna = new Duck("Anna", 0, true, tina);
+        Duck timo = new Duck("Timo", 0, false, anna);
+
+        timo.printAncestorsRecursive();
+    }
+
+}

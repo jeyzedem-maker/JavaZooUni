@@ -16,8 +16,8 @@ public class Zoo {
         allBirds[0] = new Duck("Freddy the Duck", 2, false);
         allBirds[1] = new Duck("Tina the Duck", 8);
 
-        allBirds[2] = new Ostrich("Gustel the Ostrich", 10, false);
-        allBirds[3] = new Ostrich("Ossi the Ostrich", 12);
+        allBirds[2] = new Ostrich("Gustel the Ostrich", -5, false);
+        allBirds[3] = new Ostrich("Ossi the Ostrich", 12, true);
 
         allBirds[4] = new Chicken("Charlie the Chicken", 2, false);
         allBirds[5] = new Chicken("Ciara the Chicken", 1);
@@ -29,9 +29,13 @@ public class Zoo {
         myZoo.listAllAnimals();
         System.out.println(" ----- Letting flying birds fly -----");
         myZoo.letAllFlyingBirdsFly();
+
         System.out.println(" ----- Feeding all animals -----");
         myZoo.feedAllAnimals();
-        myZoo.breedAllAnimals();
+
+        System.out.println(" ----- Let Ducks lay eggs -----");
+        myZoo.letDucksHaveChildren();
+
     }
 
     public void listAllAnimals() {
@@ -96,11 +100,15 @@ public class Zoo {
     public void letDucksHaveChildren() {
         for (int i = 0; i < allBirds.length; i++) {
             if (allBirds[i] instanceof Duck) {
-                Duck currentDuck = (Duck) allBirds[i];
-                currentDuck.layEggs();
-                currentDuck.listAllChildren();
-            }
+                try {
+                    Duck currentDuck = (Duck) allBirds[i];
+                    currentDuck.layEggs();
+                    currentDuck.listAllChildren();
+                } catch (MaleBirdsCannotLayEggsException ex) {
+                    System.out.println("Skipping " + allBirds[i].getName() + " as it is male");
+                }
 
+            }
         }
     }
     public void letOstrichesHaveChildren() {

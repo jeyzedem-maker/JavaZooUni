@@ -1,34 +1,34 @@
+
 public class Hummingbird extends Bird implements Flyable, Herbivore {
+    private Hummingbird[] children;
 
-
-    public Hummingbird(String givenName, int age) {
-        this(givenName, 0, true);
-    }
-
-    public Hummingbird(String givenname, int age, boolean isFemale) {
-        setName(givenname);
-        setAge(age);
-        setFemale(isFemale);
+    public Hummingbird(String givenName) {
+        setName(givenName);
+        setAge(0);
     }
 
     public void layEggs() {
-        if (getFemale()) {
+        if (this.isFemale()) {
             if (children == null) {
-                children = new Hummingbird[4];
+                children = new Hummingbird[1];
 
-                children[0] = new Hummingbird("Anna", 0, true);
-                children[1] = new Hummingbird("Bertha", 0, true);
-                children[2] = new Hummingbird("Cesar", 0, false);
-                children[3] = new Hummingbird("Donald", 0, false);
+                children[0] = new Hummingbird("Flatterelia");
             }
-        } else System.out.println("Männliche Ducks können keine Eier legen");
+        } else {
+            System.out.println("Männliche Hummingbirds können keine Eier legen");
+        }
+    }
+
+    public void fly() {
+        flapWings(7);
+        System.out.println(getName() + " flys now");
     }
 
     public void eat(HerbivoreEatable food) {
         System.out.println(getName() + " is slurping some " + food);
     }
 
-    public void fly() {
-        System.out.println("Flying");
-    }
+
+
+
 }

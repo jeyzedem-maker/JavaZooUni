@@ -11,8 +11,8 @@ public class Main {
         numbers[5] = 1;
         Duck freddyTheDuck = new Duck("Bärbel", numbers[0], false);
         Duck tinaTheDuck = new Duck("Tina", numbers[1], false);
-        Ostrich gustelTheOstrich = new Ostrich("Gustel", 10);
-        Ostrich ossiTheOstrich = new Ostrich("Ossi", 12);
+        Ostrich gustelTheOstrich = new Ostrich("Gustel", 10, false);
+        Ostrich ossiTheOstrich = new Ostrich("Ossi", 12, false);
         Chicken charlieTheChicken = new Chicken("Charlie", 2);
         Chicken ciaraTheChicken = new Chicken("Ciara", 1);
 

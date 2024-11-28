@@ -19,7 +19,4 @@ public abstract class Animal extends Creature {
         return "[name: " + name + ", age: " + getAge() + "]";
     }
 
-    public void move() {
-        System.out.println(getName() + " is moving around");
-    }
 }
